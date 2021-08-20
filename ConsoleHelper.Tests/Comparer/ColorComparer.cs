@@ -94,6 +94,24 @@ namespace ConsoleHelper.Tests
 
             Assert.False(ColorComparer.Equals(source, target));
         }
+        
+        [Test]
+        public void Equals_RgbXyz_Correct()
+        {
+            var source = new RGB(10, 20, 10);
+            var target = new XYZ(0.43011701684271597, 0.5867562215079294, 0.37774575807786603);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_RgbXyz_Incorrect()
+        {
+            var source = new RGB(10, 20, 30);
+            var target = new XYZ(0, 100, 20);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
 
         [Test]
         public void Equals_HexRgb_Correct()
@@ -181,6 +199,24 @@ namespace ConsoleHelper.Tests
         {
             var source = new HSL(200, 200, 200);
             var target = new HEX("#121212");
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+        
+        [Test]
+        public void Equals_HexXyz_Correct()
+        {
+            var source = new XYZ(5.699791412405596, 9.958316792578774, 3.135110923508634);
+            var target = new HEX("#226622");
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+        
+        [Test]
+        public void Equals_HexXyz_Incorrect()
+        {   
+            var source = new XYZ(120, 100, 10);
+            var target = new HEX("#ffffff");
 
             Assert.False(ColorComparer.Equals(source, target));
         }
@@ -274,6 +310,24 @@ namespace ConsoleHelper.Tests
 
             Assert.False(ColorComparer.Equals(source, target));
         }
+        
+        [Test]
+        public void Equals_CmykXyz_Correct()
+        {
+            var source = new CMYK(0, 10, 12, 36);
+            var target = new XYZ(30, 30, 30);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_CmykXyz_Incorrect()
+        {
+            var source = new CMYK(10, 24, 36, 6);
+            var target = new XYZ(10, 32, 12);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
 
         [Test]
         public void Equals_HsvRgb_Correct()
@@ -343,6 +397,24 @@ namespace ConsoleHelper.Tests
         {
             var source = new HSV(261, 61, 20);
             var target = new HSL(0, 0, 0);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+        
+        [Test]
+        public void Equals_HsvXyz_Correct()
+        {
+            var source = new HSV(100, 20, 100);
+            var target = new XYZ(76.47787698308086, 91.25178542741659, 70.70928495701926);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_HsvXyz_Incorrect()
+        {
+            var source = new HSV(12, 12, 12);
+            var target = new XYZ(10, 10, 10);
 
             Assert.False(ColorComparer.Equals(source, target));
         }
@@ -433,6 +505,132 @@ namespace ConsoleHelper.Tests
         {
             var source = new HSL(100, 100, 100);
             var target = new HSL(0, 0, 0);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+        
+        [Test]
+        public void Equals_HslXyz_Correct()
+        {
+            var source = new HSL(344, 4, 50);
+            var target = new XYZ(20, 20, 22);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_HslXyz_Incorrect()
+        {
+            var source = new HSL(1, 10, 100);
+            var target = new XYZ(2, 20, 200);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+        
+        [Test]
+        public void Equals_XyzRgb_Correct()
+        {
+            var source = new XYZ(0.43011701684271597, 0.5867562215079294, 0.37774575807786603);
+            var target = new RGB(10, 20, 10);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzRgb_Incorrect()
+        {
+            var source = new XYZ(0, 0, 0);
+            var target = new RGB(100, 100, 100);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzHex_Correct()
+        {
+            var source = new XYZ(5.699791412405596, 9.958316792578774, 3.135110923508634);
+            var target = new HEX("226622");
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzHex_Incorrect()
+        {
+            var source = new XYZ(100, 100, 100);
+            var target = new HEX("ababab");
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzCmyk_Correct()
+        {
+            var source = new XYZ(43.51851344932272, 47.11567032831833, 41.45089374761614);
+            var target = new CMYK(10, 10, 20, 20);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzCmyk_Incorrect()
+        {
+            var source = new XYZ(20, 36, 48);
+            var target = new CMYK(0, 100, 20, 160);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzHsv_Correct()
+        {
+            var source = new XYZ(20.862806611491127, 19.133352252151763, 12.718731377483968);
+            var target = new HSV(20, 40, 60);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzHsv_Incorrect()
+        {
+            var source = new XYZ(100, 0, 100);
+            var target = new HSV(20, 0, 20);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzHsl_Correct()
+        {
+            var source = new XYZ(7.204152260786181, 6.508662463833722, 5.291475940262422);
+            var target = new HSL(10, 20, 30);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzHsl_Incorrect()
+        {
+            var source = new XYZ(20, 20, 20);
+            var target = new HSL(40, 40, 40);
+
+            Assert.False(ColorComparer.Equals(source, target));
+        }
+        
+        [Test]
+        public void Equals_XyzXyz_Correct()
+        {
+            var source = new XYZ(10, 20, 32);
+            var target = new XYZ(10, 20, 32);
+
+            Assert.True(ColorComparer.Equals(source, target));
+        }
+
+        [Test]
+        public void Equals_XyzXyz_Incorrect()
+        {
+            var source = new XYZ(20, 20, 20);
+            var target = new XYZ(30, 30, 30);
 
             Assert.False(ColorComparer.Equals(source, target));
         }

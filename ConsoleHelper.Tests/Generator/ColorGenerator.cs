@@ -39,6 +39,13 @@ namespace ConsoleHelper.Tests
             var result = ColorGenerator.GetRandomColor<HSL>();
             Assert.NotNull((HSL)result);
         }
+        
+        [Test]
+        public void GetRandomColorXyz()
+        {
+            var result = ColorGenerator.GetRandomColor<XYZ>();
+            Assert.NotNull((XYZ)result);
+        }
 
         [Test]
         [Repeat(10000)]
