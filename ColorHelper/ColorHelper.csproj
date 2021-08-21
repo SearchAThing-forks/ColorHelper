@@ -5,8 +5,8 @@
     <Authors>Artyom Gritsuk</Authors>
     <RepositoryUrl>https://github.com/iamartyom/ColorHelper</RepositoryUrl>
     <PackageProjectUrl>https://github.com/iamartyom/ColorHelper</PackageProjectUrl>
-    <PackageTags>Color, Converter, RGB, HEX, CMYK, HSV, HSL</PackageTags>
-    <PackageReleaseNotes>Add HSV color type</PackageReleaseNotes>
+    <PackageTags>Color, Converter, RGB, HEX, CMYK, HSV, HSL, XYZ</PackageTags>
+    <PackageReleaseNotes>Add XYZ color space</PackageReleaseNotes>
     <Description>This library contains several useful classes:
 
 - ColorConverter
@@ -15,22 +15,32 @@ RgbToHex
 RgbToCmyk
 RgbToHsv
 RgbToHsl
+RgbToXyz
 HexToRgb
 HexToCmyk
 HexToHsv
 HexToHsl
+HexToXyz
 CmykToRgb
 CmykToHex
 CmykToHsv
 CmykToHsl
+CmykToXyz
 HsvToRgb
 HsvToHex
 HsvToCmyk
 HsvToHsl
+HsvToXyz
 HslToRgb
 HslToHex
 HslToCmyk
 HslToHsv
+HslToXyz
+XyzToRgb
+XyzToHex
+XyzToCmyk
+XyzToHsv
+XyzToHsl
 
 - ColorComparer
 
@@ -43,6 +53,7 @@ GetDarkRandomColor</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Version>1.4.0</Version>
     <PackageIcon>logo.jpg</PackageIcon>
+    <PackageVersion>1.5.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
