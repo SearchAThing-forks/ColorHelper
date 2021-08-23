@@ -1,6 +1,6 @@
-# ColorHelper - Useful methods for work with colors
+# ColorHelper - Useful methods for work with color spaces
 
-Supported color types:
+Supported color spaces:
 - RGB
 - HEX
 - CMYK
@@ -12,7 +12,7 @@ This library provides several useful classes:
 
 ## ColorConverter
 
-Convert RGB to HEX:
+Convert Rgb to HEX:
 ```
 HEX hex = ColorConverter.RgbToHex(new RGB(10, 20, 30));
 ```
@@ -104,7 +104,7 @@ CMYK cmyk = ColorConverter.HsvToCmyk(new HSL(0, 0, 100));
 
 Convert Hsv to Hsl:
 ```
-HSL hsl = ColorConverter.HsvToHsl(new HSL(0, 0, 100));
+HSV hsv = ColorConverter.HsvToHsl(new HSL(0, 0, 100));
 ```
 
 Convert Hsv to Xyz:
