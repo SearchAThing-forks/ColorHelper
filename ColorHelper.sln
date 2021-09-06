@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorHelper", "ColorHelper\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorHelper.ConsoleDemo", "ColorHelper.ConsoleDemo\ColorHelper.ConsoleDemo.csproj", "{33659A04-17B8-468D-AF34-28D51793FAFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHelper.Tests", "ConsoleHelper.Tests\ConsoleHelper.Tests.csproj", "{D7E11FEA-1D25-40AC-A5FD-C4515821ECAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorHelper.Tests", "ColorHelper.Tests\ColorHelper.Tests.csproj", "{D7E11FEA-1D25-40AC-A5FD-C4515821ECAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
