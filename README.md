@@ -195,3 +195,17 @@ Get dark random color:
 ```
 RGB rgb = ColorGenerator.GetDarkRandomColor<type>();
 ```
+
+## Enums:
+
+
+- ColorName - Enum with many color names:
+
+```
+RGB rgb = ColorName.Aquamarine.ToRgb();
+HEX hex = ColorName.RedPurple.ToHex();
+CMYK cmyk = ColorName.SpanishRed.ToCmyk();
+HSV hsv = ColorName.Coral.ToHsv();
+HSL hsl = ColorName.NeonFuchsia.ToHsl();
+XYZ xyz = ColorName.Raspberry.ToXyz();
+```
