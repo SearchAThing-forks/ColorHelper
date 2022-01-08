@@ -79,7 +79,6 @@ namespace ColorHelper
         BlueCrayola,
         BlueMunsell,
         BlueNCS,
-        BluePantone,
         BluePigment,
         BlueRYB,
         BlueBell,
@@ -356,7 +355,6 @@ namespace ColorHelper
         GreenCrayola,
         GreenWeb,
         GreenMunsell,
-        GreenPantone,
         GreenPigment,
         GreenBlue,
         GreenBlueCrayola,
@@ -474,7 +472,6 @@ namespace ColorHelper
         Magenta,
         MagentaCrayola,
         MagentaDye,
-        MagentaPantone,
         MagentaProcess,
         MagentaHaze,
         MagicMint,
@@ -594,7 +591,6 @@ namespace ColorHelper
         OperaMauve,
         Orange,
         OrangeCrayola,
-        OrangePantone,
         OrangeWeb,
         OrangePeel,
         OrangeRed,
@@ -617,7 +613,6 @@ namespace ColorHelper
         PaleCerulean,
         PaleDogwood,
         PalePink,
-        PalePurplePantone,
         PaleSilver,
         PaleSpringBud,
         PansyPurple,
@@ -655,7 +650,6 @@ namespace ColorHelper
         PineGreen,
         PineTree,
         Pink,
-        PinkPantone,
         PinkFlamingo,
         PinkLace,
         PinkLavender,
@@ -704,7 +698,6 @@ namespace ColorHelper
         Red,
         RedCrayola,
         RedMunsell,
-        RedPantone,
         RedPigment,
         RedOrange,
         RedOrangeCrayola,
@@ -934,7 +927,6 @@ namespace ColorHelper
         Yellow,
         YellowCrayola,
         YellowMunsell,
-        YellowPantone,
         YellowProcess,
         YellowGreen,
         YellowGreenCrayola,
@@ -1101,8 +1093,6 @@ namespace ColorHelper
                     return new RGB(0, 58, 69);
                 case ColorName.BlueNCS:
                     return new RGB(0, 53, 74);
-                case ColorName.BluePantone:
-                    return new RGB(0, 9, 66);
                 case ColorName.BluePigment:
                     return new RGB(20, 20, 60);
                 case ColorName.BlueRYB:
@@ -1655,8 +1645,6 @@ namespace ColorHelper
                     return new RGB(0, 50, 0);
                 case ColorName.GreenMunsell:
                     return new RGB(0, 66, 47);
-                case ColorName.GreenPantone:
-                    return new RGB(0, 68, 26);
                 case ColorName.GreenPigment:
                     return new RGB(0, 65, 31);
                 case ColorName.GreenBlue:
@@ -1891,8 +1879,6 @@ namespace ColorHelper
                     return new RGB(96, 33, 65);
                 case ColorName.MagentaDye:
                     return new RGB(79, 12, 48);
-                case ColorName.MagentaPantone:
-                    return new RGB(82, 25, 49);
                 case ColorName.MagentaProcess:
                     return new RGB(100, 0, 56);
                 case ColorName.MagentaHaze:
@@ -2131,8 +2117,6 @@ namespace ColorHelper
                     return new RGB(100, 50, 0);
                 case ColorName.OrangeCrayola:
                     return new RGB(100, 46, 22);
-                case ColorName.OrangePantone:
-                    return new RGB(100, 35, 0);
                 case ColorName.OrangeWeb:
                     return new RGB(100, 65, 0);
                 case ColorName.OrangePeel:
@@ -2177,8 +2161,6 @@ namespace ColorHelper
                     return new RGB(93, 48, 61);
                 case ColorName.PalePink:
                     return new RGB(98, 85, 87);
-                case ColorName.PalePurplePantone:
-                    return new RGB(98, 90, 98);
                 case ColorName.PaleSilver:
                     return new RGB(79, 75, 73);
                 case ColorName.PaleSpringBud:
@@ -2253,8 +2235,6 @@ namespace ColorHelper
                     return new RGB(16, 18, 14);
                 case ColorName.Pink:
                     return new RGB(100, 75, 80);
-                case ColorName.PinkPantone:
-                    return new RGB(84, 28, 58);
                 case ColorName.PinkFlamingo:
                     return new RGB(99, 45, 99);
                 case ColorName.PinkLace:
@@ -2351,8 +2331,6 @@ namespace ColorHelper
                     return new RGB(93, 13, 30);
                 case ColorName.RedMunsell:
                     return new RGB(95, 0, 24);
-                case ColorName.RedPantone:
-                    return new RGB(93, 16, 22);
                 case ColorName.RedPigment:
                     return new RGB(93, 11, 14);
                 case ColorName.RedOrange:
@@ -2811,8 +2789,6 @@ namespace ColorHelper
                     return new RGB(99, 91, 51);
                 case ColorName.YellowMunsell:
                     return new RGB(94, 80, 0);
-                case ColorName.YellowPantone:
-                    return new RGB(100, 87, 0);
                 case ColorName.YellowProcess:
                     return new RGB(100, 94, 0);
                 case ColorName.YellowGreen:
