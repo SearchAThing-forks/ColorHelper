@@ -1031,6 +1031,8 @@ namespace ColorHelper
                     return new RGB(96, 76, 76);
                 case ColorName.BabyPowder:
                     return new RGB(100, 100, 98);
+                case ColorName.BakerMillerPink:
+                    return new RGB(255, 145, 175); 
                 case ColorName.BananaMania:
                     return new RGB(98, 91, 71);
                 case ColorName.BarbiePink:
