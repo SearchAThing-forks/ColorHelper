@@ -210,9 +210,50 @@ namespace ConsoleHelper.Tests
             Assert.AreEqual(new HSV(338, 72, 28), result);
         }
 
+        [Test]
+        public void HslToXyz()
+        {
+            var result = ColorConverter.HslToXyz(new HSL(50, 60, 80));
+            Assert.AreEqual(
+                new XYZ(68.4594297801599, 73.99060685808122, 50.208580024011965),
+                result);
+        }
 
-      
- 
+        [Test]
+        public void XyzToRgb()
+        {
+            var result = ColorConverter.XyzToRgb(
+                new XYZ(0.43011701684271597, 0.5867562215079294, 0.37774575807786603));
+            Assert.AreEqual(new RGB(10, 20, 10), result);
+        }
 
+        [Test]
+        public void XyzToHex()
+        {
+            var result = ColorConverter.XyzToHex(
+                new XYZ(5.699791412405596, 9.958316792578774, 3.135110923508634));
+            Assert.AreEqual(new HEX("226622"), result);
+        }
+
+        [Test]
+        public void XyzToCmyk()
+        {
+            var result = ColorConverter.XyzToCmyk(new XYZ(30, 30, 30));
+            Assert.AreEqual(new CMYK(0, 10, 12, 36), result);
+        }
+
+        [Test]
+        public void XyzToHsv()
+        {
+            var result = ColorConverter.XyzToHsv(new XYZ(10, 10, 10));
+            Assert.AreEqual(new HSV(10, 13, 39), result);
+        }
+
+        [Test]
+        public void XyzToHsl()
+        {
+            var result = ColorConverter.XyzToHsl(new XYZ(20, 20, 22));
+            Assert.AreEqual(new HSL(344, 4, 50), result);
+        }
     }
 }
