@@ -6,7 +6,7 @@
     <RepositoryUrl>https://github.com/iamartyom/ColorHelper</RepositoryUrl>
     <PackageProjectUrl>https://github.com/iamartyom/ColorHelper</PackageProjectUrl>
     <PackageTags>Color, Converter, RGB, HEX, CMYK, HSV, HSL, XYZ</PackageTags>
-    <PackageReleaseNotes>Fix problem with BakerMillerPink color</PackageReleaseNotes>
+    <PackageReleaseNotes>Fix issue of black not being returned correctly for HSV HSL and another minor changes.</PackageReleaseNotes>
     <Description>This library contains several useful classes:
 
 - ColorConverter
@@ -55,9 +55,9 @@ Enums
 - ColorName</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.4.0</Version>
+    <Version>1.6.2</Version>
     <PackageIcon>logo.jpg</PackageIcon>
-    <PackageVersion>1.6.1</PackageVersion>
+    <PackageVersion>1.6.2</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
