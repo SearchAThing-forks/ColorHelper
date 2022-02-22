@@ -84,7 +84,7 @@ namespace ColorHelper
         {
             double[] modifiedRGB = { rgb.R / 255.0, rgb.G / 255.0, rgb.B / 255.0 };
 
-            for(var x = 0; x < modifiedRGB.Length; x++)
+            for (var x = 0; x < modifiedRGB.Length; x++)
             {
                 modifiedRGB[x] =
                     (modifiedRGB[x] > 0.04045) ?
@@ -202,7 +202,12 @@ namespace ColorHelper
             q = (modifiedL < 0.5) ? modifiedL * (1 + modifiedS) : modifiedL + modifiedS - modifiedL * modifiedS;
             p = 2 * modifiedL - q;
 
-            if (modifiedS != 0)
+            if (modifiedL == 0)  // if the lightness value is 0 it will always be black
+            {
+                r = 0;
+                g = 0;
+                b = 0;
+            } else if (modifiedS != 0)
             {
                 r = GetHue(p, q, modifiedH + 1.0 / 3);
                 g = GetHue(p, q, modifiedH);
@@ -258,7 +263,7 @@ namespace ColorHelper
 
             return new HSV(hsl.H, (byte)Math.Round(hsvS * 100), (byte)Math.Round(hsvV * 100));
         }
-        
+
         public static XYZ HslToXyz(HSL hsl)
         {
             return RgbToXyz(HslToRgb(hsl));
@@ -267,7 +272,7 @@ namespace ColorHelper
         public static RGB XyzToRgb(XYZ xyz)
         {
             double modifiedX = xyz.X / 100.0, modifiedY = xyz.Y / 100.0, modifiedZ = xyz.Z / 100.0;
-            
+
             double[] rgb = new double[3];
             rgb[0] = modifiedX * 3.2410 + modifiedY * (-1.5374) + modifiedZ * (-0.4986);
             rgb[1] = modifiedX * (-0.9692) + modifiedY * 1.8760 + modifiedZ * 0.0416;
@@ -277,25 +282,25 @@ namespace ColorHelper
             {
                 rgb[x] = (rgb[x] <= 0.0031308) ? 12.92 * rgb[x] : 1.055 * Math.Pow(rgb[x], 0.41666666666) - 0.055;
             }
-            
+
             return new RGB((byte)Math.Round(rgb[0] * 255), (byte)Math.Round(rgb[1] * 255), (byte)Math.Round(rgb[2] * 255));
         }
-        
+
         public static HEX XyzToHex(XYZ xyz)
         {
             return RgbToHex(XyzToRgb(xyz));
         }
-        
+
         public static CMYK XyzToCmyk(XYZ xyz)
         {
             return RgbToCmyk(XyzToRgb(xyz));
         }
-        
+
         public static HSV XyzToHsv(XYZ xyz)
         {
             return RgbToHsv(XyzToRgb(xyz));
         }
-        
+
         public static HSL XyzToHsl(XYZ xyz)
         {
             return RgbToHsl(XyzToRgb(xyz));
