@@ -13,7 +13,7 @@ This library provides several useful classes:
 
 ## ColorConverter
 
-Convert Rgb to HEX:
+Convert Rgb to Hex:
 ```
 HEX hex = ColorConverter.RgbToHex(new RGB(10, 20, 30));
 ```
