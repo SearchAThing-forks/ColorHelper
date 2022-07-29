@@ -101,6 +101,17 @@ namespace ColorHelper
             );
         }
 
+        public static YIQ RgbToYiq(RGB rgb)
+        {
+            double[] modifiedRGB = { rgb.R / 255.0, rgb.G / 255.0, rgb.B / 255.0 };
+
+            return new YIQ(
+                (modifiedRGB[0] * 0.299 + modifiedRGB[1] * 0.587 + modifiedRGB[2] * 0.114),
+                (modifiedRGB[0] * 0.596 - modifiedRGB[1] * 0.274 - modifiedRGB[2] * 0.322),
+                (modifiedRGB[0] * 0.211 - modifiedRGB[1] * 0.522 + modifiedRGB[2] * 0.311)
+            );
+        }
+
         public static RGB HexToRgb(HEX hex)
         {
             int value = Convert.ToInt32(hex.Value, 16);
@@ -128,6 +139,11 @@ namespace ColorHelper
         public static XYZ HexToXyz(HEX hex)
         {
             return RgbToXyz(HexToRgb(hex));
+        }
+
+        public static YIQ HexToYiq(HEX hex)
+        {
+            return RgbToYiq(HexToRgb(hex));
         }
 
         public static RGB CmykToRgb(CMYK cmyk)
@@ -189,6 +205,11 @@ namespace ColorHelper
         public static XYZ HsvToXyz(HSV hsv)
         {
             return RgbToXyz(HsvToRgb(hsv));
+        }
+
+        public static YIQ HsvToYiq(HSV hsv)
+        {
+            return RgbToYiq(HsvToRgb(hsv));
         }
 
         public static RGB HslToRgb(HSL hsl)
@@ -269,6 +290,11 @@ namespace ColorHelper
             return RgbToXyz(HslToRgb(hsl));
         }
 
+        public static YIQ HslToYiq(HSL hsl)
+        {
+            return RgbToYiq(HslToRgb(hsl));
+        }
+
         public static RGB XyzToRgb(XYZ xyz)
         {
             double modifiedX = xyz.X / 100.0, modifiedY = xyz.Y / 100.0, modifiedZ = xyz.Z / 100.0;
@@ -304,6 +330,46 @@ namespace ColorHelper
         public static HSL XyzToHsl(XYZ xyz)
         {
             return RgbToHsl(XyzToRgb(xyz));
+        }
+
+        public static YIQ XyzToYiq(XYZ xyz)
+        {
+            return RgbToYiq(XyzToRgb(xyz));
+        }
+
+        public static RGB YiqToRgb(YIQ yiq)
+        {
+            double[] rgb = new double[3];
+            rgb[0] = yiq.Y + yiq.I * 0.956 + yiq.Q * 0.621;
+            rgb[1] = yiq.Y - yiq.I * 0.272 - yiq.Q * 0.647;
+            rgb[2] = yiq.Y - yiq.I * 1.106 + yiq.Q * 1.703;
+
+            return new RGB((byte)Math.Round(rgb[0] * 255), (byte)Math.Round(rgb[1] * 255), (byte)Math.Round(rgb[2] * 255));
+        }
+
+        public static HEX YiqToHex(YIQ yiq)
+        {
+            return RgbToHex(YiqToRgb(yiq));
+        }
+
+        public static CMYK YiqToCmyk(YIQ yiq)
+        {
+            return RgbToCmyk(YiqToRgb(yiq));
+        }
+
+        public static HSV YiqToHsv(YIQ yiq)
+        {
+            return RgbToHsv(YiqToRgb(yiq));
+        }
+
+        public static HSL YiqToHsl(YIQ yiq)
+        {
+            return RgbToHsl(YiqToRgb(yiq));
+        }
+
+        public static XYZ YiqToXyz(YIQ yiq)
+        {
+            return RgbToXyz(YiqToRgb(yiq));
         }
     }
 }

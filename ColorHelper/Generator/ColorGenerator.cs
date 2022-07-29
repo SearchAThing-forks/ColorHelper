@@ -71,6 +71,10 @@ namespace ColorHelper
             {
                 return (T)(object)ColorConverter.RgbToXyz(rgb);
             }
+            else if (typeof(T) == typeof(YIQ))
+            {
+                return (T)(object)ColorConverter.RgbToYiq(rgb);
+            }
             else
             {
                 throw new ArgumentException("Incorrect class type");

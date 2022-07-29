@@ -7,6 +7,7 @@ Supported color spaces:
 - HSV
 - HSL
 - XYZ
+- YIQ
 
 This library provides several useful classes:
 
@@ -37,6 +38,11 @@ Convert Rgb to Xyz:
 XYZ xyz = ColorConverter.RgbToXyz(new RGB(10, 20, 30));
 ```
 
+Convert Rgb to Yiq:
+```
+YIQ yiq = ColorConverter.RgbToYiq(new RGB(10, 20, 30));
+```
+
 Convert Hex to Rgb:
 ```
 RGB rgb = ColorConverter.HexToRgb(new HEX("#00FF00"));
@@ -60,6 +66,11 @@ HSL hsl = ColorConverter.HexToHsl(new HEX("#00FF00"));
 Convert Hex to Xyz:
 ```
 XYZ xyz = ColorConverter.HexToXyz(new HEX("#00FF00"));
+```
+
+Convert Hex to Yiq:
+```
+YIQ yiq = ColorConverter.HexToYiq(new HEX("#00FF00"));
 ```
 
 Convert Cmyk to Rgb:
@@ -87,6 +98,11 @@ Convert Cmyk to Xyz:
 XYZ xyz = ColorConverter.CmykToXyz(new CMYK(0, 100, 0, 100));
 ```
 
+Convert Cmyk to Yiq:
+```
+YIQ yiq = ColorConverter.CmykToYiq(new CMYK(0, 100, 0, 100));
+```
+
 Convert Hsv to Rgb:
 ```
 RGB rgb = ColorConverter.HsvToRgb(new HSL(0, 0, 100));
@@ -110,6 +126,11 @@ HSV hsv = ColorConverter.HsvToHsl(new HSL(0, 0, 100));
 Convert Hsv to Xyz:
 ```
 XYZ xyz = ColorConverter.HsvToXyz(new HSL(0, 0, 100));
+```
+
+Convert Hsv to Yiq:
+```
+YIQ yiq = ColorConverter.HsvToYiq(new HSL(0, 0, 100));
 ```
 
 Convert Hsl to Rgb:
@@ -137,6 +158,11 @@ Convert Hsl to Xyz:
 XYZ xyz = ColorConverter.HslToXyz(new HSL(0, 0, 100));
 ```
 
+Convert Hsl to Yiq:
+```
+YIQ yiq = ColorConverter.HslToYiq(new HSL(0, 0, 100));
+```
+
 Convert Xyz to Rgb:
 ```
 RGB rgb = ColorConverter.XyzToRgb(new XYZ(0, 0, 10));
@@ -162,6 +188,45 @@ Convert Xyz to Hsl:
 HSL hsl = ColorConverter.XyzToHsl(new XYZ(0, 0, 10));
 ```
 
+Convert Xyz to Yiq:
+```
+YIQ yiq = ColorConverter.XyzToYiq(new XYZ(0, 0, 10));
+```
+
+
+
+
+
+Convert Yiq to Rgb:
+```
+RGB rgb = ColorConverter.YiqToRgb(new YIQ(0.1, 0.1, 0.2));
+```
+
+Convert Yiq to Hex:
+```
+HEX hex = ColorConverter.YiqToHex(new YIQ(0.1, 0.1, 0.2));
+```
+
+Convert Yiq to Cmyk:
+```
+CMYK cmyk = ColorConverter.YiqToCmyk(new YIQ(0.1, 0.1, 0.2));
+```
+
+Convert Yiq to Hsv:
+```
+HSV hsv = ColorConverter.YiqToHsv(new YIQ(0.1, 0.1, 0.2));
+```
+
+Convert Yiq to Hsl:
+```
+HSL hsl = ColorConverter.YiqToHsl(new YIQ(0.1, 0.1, 0.2));
+```
+
+Convert Yiq to Xyz:
+```
+YIQ yiq = ColorConverter.YiqToXyz(new YIQ(0.1, 0.1, 0.2));
+```
+
 ## ColorComparer
 ```
 bool result = ColorComparer.Equals(new RGB(100, 100, 100), new HEX("#FFFFFF"));
@@ -182,6 +247,7 @@ CMYK cmyk = ColorGenerator.GetRandomColor<CMYK>();
 HSV hsv = ColorGenerator.GetRandomColor<HSV>();
 HSL hsl = ColorGenerator.GetRandomColor<HSL>();
 XYZ xyz = ColorGenerator.GetRandomColor<XYZ>();
+YIQ yiq = ColorGenerator.GetRandomColor<YIQ>();
 ```
 
 Get light random color:
@@ -208,4 +274,5 @@ CMYK cmyk = ColorName.SpanishRed.ToCmyk();
 HSV hsv = ColorName.Coral.ToHsv();
 HSL hsl = ColorName.NeonFuchsia.ToHsl();
 XYZ xyz = ColorName.Raspberry.ToXyz();
+YIQ yiq = ColorName.Coffee.ToYiq();
 ```

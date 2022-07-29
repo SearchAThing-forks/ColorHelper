@@ -2840,5 +2840,10 @@ namespace ColorHelper
         {
             return ColorConverter.RgbToXyz(colorName.ToRgb());
         }
+
+        public static YIQ ToYiq(this ColorName colorName)
+        {
+            return ColorConverter.RgbToYiq(colorName.ToRgb());
+        }
     }
 }
