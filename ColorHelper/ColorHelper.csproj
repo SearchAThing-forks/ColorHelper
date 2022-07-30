@@ -5,8 +5,8 @@
     <Authors>Artyom Gritsuk</Authors>
     <RepositoryUrl>https://github.com/iamartyom/ColorHelper</RepositoryUrl>
     <PackageProjectUrl>https://github.com/iamartyom/ColorHelper</PackageProjectUrl>
-    <PackageTags>Color, Converter, RGB, HEX, CMYK, HSV, HSL, XYZ, YIQ</PackageTags>
-    <PackageReleaseNotes>Add YIQ color space</PackageReleaseNotes>
+    <PackageTags>Color, Converter, RGB, HEX, CMYK, HSV, HSL, XYZ, YIQ, YUV</PackageTags>
+    <PackageReleaseNotes>Add YUV color space and update YIQ</PackageReleaseNotes>
     <Description>This library contains several useful classes:
 
 - ColorConverter
@@ -16,36 +16,42 @@ RgbToCmyk
 RgbToHsv
 RgbToHsl
 RgbToXyz
+RgbToYuv
 RgbToYiq
 HexToRgb
 HexToCmyk
 HexToHsv
 HexToHsl
 HexToXyz
+HexToYuv
 HexToYiq
 CmykToRgb
 CmykToHex
 CmykToHsv
 CmykToHsl
 CmykToXyz
+CmykToYuv
 CmykToYiq
 HsvToRgb
 HsvToHex
 HsvToCmyk
 HsvToHsl
 HsvToXyz
+HsvToYuv
 HsvToYiq
 HslToRgb
 HslToHex
 HslToCmyk
 HslToHsv
 HslToXyz
+HslToYuv
 HslToYiq
 XyzToRgb
 XyzToHex
 XyzToCmyk
 XyzToHsv
 XyzToHsl
+XyzToYuv
 XyzToYiq
 YiqToRgb
 YiqToHex
@@ -53,6 +59,14 @@ YiqToCmyk
 YiqToHsv
 YiqToHsl
 YiqToXyz
+YiqToYuv
+YuvToRgb
+YuvToHex
+YuvToCmyk
+YuvToHsv
+YuvToHsl
+YuvToXyz
+YuvToYiq
 
 - ColorComparer
 
@@ -67,9 +81,9 @@ Enums
 - ColorName</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.7.0</Version>
+    <Version>1.8.0</Version>
     <PackageIcon>logo.jpg</PackageIcon>
-    <PackageVersion>1.7.0</PackageVersion>
+    <PackageVersion>1.8.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
