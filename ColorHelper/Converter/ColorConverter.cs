@@ -190,6 +190,11 @@ namespace ColorHelper
             return RgbToXyz(CmykToRgb(cmyk));
         }
 
+        public static YIQ CmykToYiq(CMYK cmyk)
+        {
+            return RgbToYiq(CmykToRgb(cmyk));
+        }
+
         public static YUV CmykToYuv(CMYK cmyk)
         {
             return RgbToYuv(CmykToRgb(cmyk));
