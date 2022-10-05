@@ -265,6 +265,12 @@ namespace ColorHelper
                 g = GetHue(p, q, modifiedH);
                 b = GetHue(p, q, modifiedH - 1.0 / 3);
             }
+            else // ensure greys are not converted to white
+            {
+                r = modifiedL;
+                g = modifiedL;
+                b = modifiedL;
+            }
 
             return new RGB((byte)Math.Round(r * 255), (byte)Math.Round(g * 255), (byte)Math.Round(b * 255));
         }
