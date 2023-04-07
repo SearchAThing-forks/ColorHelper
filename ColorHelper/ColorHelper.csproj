@@ -6,7 +6,7 @@
     <RepositoryUrl>https://github.com/iamartyom/ColorHelper</RepositoryUrl>
     <PackageProjectUrl>https://github.com/iamartyom/ColorHelper</PackageProjectUrl>
     <PackageTags>Color, Converter, RGB, HEX, CMYK, HSV, HSL, XYZ, YIQ, YUV</PackageTags>
-    <PackageReleaseNotes>Add YUV color space and update YIQ</PackageReleaseNotes>
+    <PackageReleaseNotes>Update HslToRgb method</PackageReleaseNotes>
     <Description>This library contains several useful classes:
 
 - ColorConverter
@@ -81,9 +81,9 @@ Enums
 - ColorName</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.8.0</Version>
+    <Version>1.8.1</Version>
     <PackageIcon>logo.jpg</PackageIcon>
-    <PackageVersion>1.8.0</PackageVersion>
+    <PackageVersion>1.8.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
