@@ -270,9 +270,12 @@ namespace ColorHelper
                 r = modifiedL;
                 g = modifiedL;
                 b = modifiedL;
-            }
-
-            return new RGB((byte)Math.Round(r * 255), (byte)Math.Round(g * 255), (byte)Math.Round(b * 255));
+            }      
+            
+            return new RGB(
+                (byte)Math.Round(Math.Round(r * 255, 1)), 
+                (byte)Math.Round(Math.Round(g * 255, 1)),
+                (byte)Math.Round(Math.Round(b * 255, 1)));
         }
 
         private static double GetHue(double p, double q, double t)
