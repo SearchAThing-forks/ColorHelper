@@ -120,6 +120,9 @@ namespace ConsoleHelper.Tests
         {
             var result = ColorConverter.HsvToRgb(new HSV(240, 80, 64));
             Assert.AreEqual(new RGB(32, 32, 162), result);
+
+            result = ColorConverter.HsvToRgb(new HSV(270, 100, 100));
+            Assert.AreEqual(new RGB(128, 0, 255), result);
         }
 
         [Test]
